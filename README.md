@@ -25,7 +25,10 @@ DÊ OS SEUS PRIMEIROS PASSOS NA PROGRAMAÇÃO. APRENDA PHP, LÓGICA DE PROGRAMA�
 
 ## <a name="parte1">1 - Conceitos do PHP</a>
 
-
+- 01 - Apresentação Curso de PHP 7 Básico
+- 02 - O que é o PHP?
+- 03 - Diferença entre Client e Server
+- 04 - A História do PHP 
 
 [Voltar ao Índice](#indice)
 
@@ -34,7 +37,11 @@ DÊ OS SEUS PRIMEIROS PASSOS NA PROGRAMAÇÃO. APRENDA PHP, LÓGICA DE PROGRAMA�
 
 ## <a name="parte2">2 - Organizando</a>
 
-
+- 05 - Ferramentas Para o Curso de PHP 7
+- 06 - Ambiente Completo PHP 7 com Docker (Laradock)
+  - https://laradock.io/
+- 07 - Múltiplos Projetos com Docker (Laradock)
+- 08 - Utilizando o WampServer (não recomendado!)
 
 [Voltar ao Índice](#indice)
 
