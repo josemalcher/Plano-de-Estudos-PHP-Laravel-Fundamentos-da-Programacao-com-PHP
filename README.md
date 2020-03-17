@@ -50,7 +50,76 @@ DÊ OS SEUS PRIMEIROS PASSOS NA PROGRAMAÇÃO. APRENDA PHP, LÓGICA DE PROGRAMA�
 
 ## <a name="parte3">3 - PHP 7 Básico</a>
 
+- 09 - Primeira Aplicação com PHP 7
 
+```php
+<?php
+    echo "Hello word";
+?>
+```
+ 
+- 10 - Tipos de Impressões com PHP 7
+
+```php
+<?php
+    echo 123;
+    echo 2.123;
+    echo '123';
+    print_r([1,2,3,4]); // imprime arrays
+    var_dump([1,2,3,4]);// ideal para debugs
+?>
+```
+ 
+- 11 - Comentários no PHP 7
+
+```php
+<?php
+/*
+ * comentário
+ * 
+ * */
+
+// Comentário
+
+# não tão utilizado  
+
+?>
+```
+
+- 12 - Tipos de Variáveis no PHP 7
+  - https://www.php.net/manual/pt_BR/language.types.intro.php
+```php
+<?php
+
+$name = 'José Malcher';
+
+echo $name;
+echo '<br>';
+
+$name = 'José Malcher Teste';
+echo $name;
+echo '<br>';
+
+$name = 12.2;
+echo $name;
+echo '<br>';
+
+$name = 123;
+echo $name;
+```
+
+- 13 - Constantes no PHP 7
+  - http://php.net/manual/pt_BR/language.constants.php
+
+```php
+<?php
+
+define('NOME_CONSTANTE', 123);
+
+const TESTE_CONSTANTE = 321;
+
+var_dump(TESTE_CONSTANTE);
+```
 
 [Voltar ao Índice](#indice)
 
