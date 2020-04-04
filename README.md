@@ -424,7 +424,56 @@ var_dump($names);
 ## <a name="parte5">5 - Recursos do PHP</a>
 
 - 20 - Concatenação no PHP
+
+```php
+<?php
+
+$var1 = 'Algo';
+$var2 = 'Outro';
+
+$var3 = $var1 .' '. $var2 . ' '. 12;
+// echo $var3;
+
+$name = 'Carlos Ferreira';
+$company = 'EspecializaTi';
+
+// echo 'O '.$name.' é fundador da Empresa: '.$company;
+// echo "O {$name} é fundador da Empresa: {$company}";
+// echo 'Olá mundo!';
+```
+
 - 21 - Include vs Require no PHP 
+
+```php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Site em PHP</title>
+</head>
+<body>
+<?php
+// include ('includes/header.php');
+// require ('includes/header.php');
+require_once('includes/header.php');
+?>
+
+<div>
+    <?php
+    echo 'Sou o conteúdo do site';
+    ?>
+</div>
+
+<?php
+include_once('includes/footer.php')
+?>
+
+</body>
+</html>
+```
+
 
 [Voltar ao Índice](#indice)
 
