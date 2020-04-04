@@ -483,9 +483,100 @@ include_once('includes/footer.php')
 ## <a name="parte6">6 - Operadores Condicionais no PHP</a>
 
 - 22 - Operadores Condicionais no PHP (if) 
+
+```php
+<?php
+
+$number = 12;
+$numberTwo = 12;
+
+if ($number == $numberTwo && $number == 12) {
+    echo 'É igual';
+
+    echo 'Outro algo';
+}
+```
+
 - 23 - Operador Condicional ELSE no PHP 
+
+
+```php
+<?php
+
+$numberOne = 15;
+$numberTwo = 16;
+
+if ($numberOne == $numberTwo) {
+    echo 'É igual';
+} else {
+    echo 'É diferente!';
+}
+
+echo '<hr>';
+
+if ($numberOne < 20) {
+    echo 'É menor!';
+} else {
+    echo 'É maior!';
+}
+
+```
+
 - 24 - Operador Condicional ELSEIF no PHP 
+
+```php
+<?php
+
+$numberOne = 12;
+
+if ($numberOne == 14)
+    echo 'Quatorze';
+elseif($numberOne == 13)
+    echo 'Treze';
+elseif($numberOne == 12)
+    echo 'Doze';
+else
+    echo 'Não identificado...';
+```
+
 - 25 - Operador Condicional SWITCH no PHP
+
+```php
+<?php
+
+$number = 10;
+
+switch ($number) {
+    case $number == 12:
+        echo 'Doze';    
+    break;
+    case $number == 13:
+        echo 'Treze';    
+    break;
+    case $number == 14:
+        echo 'Quatorze';    
+    break;
+    case $number == 15:
+        echo 'Quinze';    
+    break;
+    default: 
+        echo 'Valor não encontrado';
+    break;
+}
+/*
+if ($number == 12)
+    echo 'Doze';
+elseif ($number == 13)
+    echo 'Treze';
+elseif ($number == 14)
+    echo 'Quatorze';
+elseif ($number == 15)
+    echo 'Quinze';
+else
+    echo 'Não identificado...';
+*/
+```
+
 
 [Voltar ao Índice](#indice)
 
