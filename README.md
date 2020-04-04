@@ -423,7 +423,8 @@ var_dump($names);
 
 ## <a name="parte5">5 - Recursos do PHP</a>
 
-
+- 20 - Concatenação no PHP
+- 21 - Include vs Require no PHP 
 
 [Voltar ao Índice](#indice)
 
@@ -432,7 +433,10 @@ var_dump($names);
 
 ## <a name="parte6">6 - Operadores Condicionais no PHP</a>
 
-
+- 22 - Operadores Condicionais no PHP (if) 
+- 23 - Operador Condicional ELSE no PHP 
+- 24 - Operador Condicional ELSEIF no PHP 
+- 25 - Operador Condicional SWITCH no PHP
 
 [Voltar ao Índice](#indice)
 
@@ -441,7 +445,9 @@ var_dump($names);
 
 ## <a name="parte7">7 - Loops de Repetição no PHP</a>
 
-
+- 26 - Loops de Repetição no PHP FOR
+- 27 - Loops de Repetição no PHP FOREACH
+- 28 - Loops de Repetição no PHP WHILE
 
 [Voltar ao Índice](#indice)
 
@@ -450,7 +456,10 @@ var_dump($names);
 
 ## <a name="parte8">8 - Funções no PHP 7</a>
 
-
+- 29 - Declarar Funções no PHP 7
+- 30 - Funções com Parâmetros no PHP 7
+- 31 - Variáveis em Funções no PHP e uso do global
+- 32 - Funções Recursivas no PHP 7 
 
 [Voltar ao Índice](#indice)
 
@@ -459,7 +468,14 @@ var_dump($names);
 
 ## <a name="parte9">9 - Manipulação de Strings</a>
 
-
+- 33 - Manipulação de Strings no PHP (strtoupper, strtolower, ucfirst, ucwords)
+- 34 - Manipulação de Strings no PHP (explode, implode)
+- 35 - Manipulação de Strings no PHP (ltrim,rtrim,trim)
+- 36 - Manipulação de Strings no PHP (str_replace,substr,strlen)
+- 37 - Manipulação de Strings no PHP (isset,unset)
+- 38 - Manipulação de Strings no PHP (date)
+- 39 - Manipulação de Strings no PHP (phpinfo)
+- 40 - Manipulação de Strings no PHP (md5,sha1,crypt,base64,hash)
 
 [Voltar ao Índice](#indice)
 
@@ -468,7 +484,10 @@ var_dump($names);
 
 ## <a name="parte10">10 - Operadores Matematicos no PHP</a>
 
-
+- 41 - Operadores Aritiméticos PHP
+- 42 - Operadores de Atriuição PHP
+- 43 - Operadores Atribuição PHP (incremento, decremento)
+- 44 - Operadores Lógicos PHP free45 - Operadores Relacionais PHP
 
 [Voltar ao Índice](#indice)
 
@@ -477,7 +496,13 @@ var_dump($names);
 
 ## <a name="parte11">11 - Entrada de Dados no PHP</a>
 
-
+- 46 - Formulários HTML
+- 47 - Requisições GET vs POST no PHP
+- 48 - Pegar Dados Formulários com PHP
+- 49 - $_REQUEST no PHP
+- 50 - Introdução a Validação de Formulários com PHP
+- 51 - Upload de Arquivos no PHP
+- 52 - Upload de Multiplos Arquivos no PHP
 
 [Voltar ao Índice](#indice)
 
@@ -486,7 +511,8 @@ var_dump($names);
 
 ## <a name="parte12">12 - Sessions e Cookies no PHP</a>
 
-
+- 53 - Sessões (SESSIONS) no PHP
+- 54 - Cookies no PHP
 
 [Voltar ao Índice](#indice)
 
@@ -495,7 +521,11 @@ var_dump($names);
 
 ## <a name="parte13">13 - Manipulação de Arquivos e Diretórios com PHP</a>
 
-
+- 55 - Manipulação de diretórios no PHP (is_dir, mkdir, rmdir, getcwd, scandir, glob)
+- 56 - Manipulação de arquivos no PHP (touch, copy, rename, unlink, file_exists)
+- 57 - Manipulação de arquivos no PHP (file_put_contents, file_get_contents)
+- 58 - Manipulação de arquivos no PHP (fopen, fclose, fwrite)
+- 59 - Manipulação de arquivos no PHP (fgets, feof)
 
 [Voltar ao Índice](#indice)
 
@@ -504,7 +534,13 @@ var_dump($names);
 
 ## <a name="parte14">14 - MP3 Online com PHP</a>
 
-
+- 60 - Criando o Template do MP3 com PHP
+- 61 - Listagem FAKE dos Álbums com PHP
+- 62 - Listagem real dos Álbums com PHP
+- 63 - Página de Cadastrar Novo Álbum com PHP
+- 64 - Listagem das Músicas do Álbum com PHP
+- 65 - Upload Novo Álbum com PHP
+- 66 - Cadastrar Novas Músicas para Álbum com PHP
 
 [Voltar ao Índice](#indice)
 
