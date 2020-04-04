@@ -586,8 +586,78 @@ else
 ## <a name="parte7">7 - Loops de Repetição no PHP</a>
 
 - 26 - Loops de Repetição no PHP FOR
+
+```php
+<?php
+
+$names = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+echo '<hr>';
+
+for ($i = 0; $i<count($names); $i++) {
+    echo $names[$i];
+}
+/**
+for ($i = 10; $i>0; $i--) {
+    echo "{$i} <br>";
+}
+ */
+/**
+for ($i = 0; $i<10; $i++) {
+    echo "{$i} <br>";
+}
+ */
+
+echo '<hr>';
+```
+
 - 27 - Loops de Repetição no PHP FOREACH
+
+```php
+<?php
+
+// $names = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+$names = [
+    'a' => 'aa',
+    'b' => 'bb',
+    'c' => 'cc',
+    'd' => 'dd',
+    'e' => 'ee',
+    'f' => 'ff',
+    'g' => 'gg',
+    'h' => 'hh',
+];
+
+foreach ($names as $key => $name) {
+    echo "{$name} <br>";
+}
+```
+
 - 28 - Loops de Repetição no PHP WHILE
+
+```php
+<?php
+
+$names = ['a', 'b', 'c', 'd'];
+
+$i = 0;
+
+while ($i < count($names)) {
+    echo $names[$i];
+
+    $i++;
+}
+
+echo '<hr>';
+
+$a = 11;
+do {
+    echo $a;
+
+    $a++;
+} while ($a <= 10);
+```
+
 
 [Voltar ao Índice](#indice)
 
