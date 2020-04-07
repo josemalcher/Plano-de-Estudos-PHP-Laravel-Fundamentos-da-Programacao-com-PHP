@@ -667,9 +667,95 @@ do {
 ## <a name="parte8">8 - Funções no PHP 7</a>
 
 - 29 - Declarar Funções no PHP 7
+
+```php
+<?php
+
+function testFunction(): String  //A partir da versão 7
+{
+    return 'Sou uma função <br>';
+}
+
+echo testFunction();
+echo testFunction();
+echo testFunction();
+echo testFunction();
+echo testFunction();
+echo testFunction();
+```
+
 - 30 - Funções com Parâmetros no PHP 7
+
+```php
+<?php
+
+function pt(String $value)
+{
+    echo "{$value} <br>";
+}
+// pt('Algo');
+
+function sum(int $n1, int $n2): int
+{
+    return $n1 + $n2;
+}
+// echo sum(12, 90);
+
+function sumTwo(int $n1, int $n2, int $taxa = 2):int
+{
+    return ($n1 + $n2) * $taxa;
+}
+echo sumTwo(1,2);
+```
+
 - 31 - Variáveis em Funções no PHP e uso do global
+
+```php
+<?php
+
+$taxa = 2;
+
+function sum(int $n1, int $n2):Array
+{
+    global $taxa;
+
+    $teste = 12;
+    $soma = ($n1 + $n2) * $taxa;
+
+    return [
+        'teste' => $teste,
+        'soma'  => $soma,
+    ];
+}
+
+//$result = sum(1,2);
+//var_dump($result['soma']);
+//echo sum(2,2);
+//echo sum(2,2)['soma'];
+```
+
 - 32 - Funções Recursivas no PHP 7 
+
+```php
+<?php
+
+// 4 => 4*3*2*1 = 24
+// 2 => 2*1 = 2
+// 3 => 3*2*1 = 6
+
+function factorial(int $number): int
+{
+    if ($number <= 1)
+        $number = $number;
+    else
+        $number *= factorial($number -1);
+
+    return $number;
+}
+
+echo factorial(4);
+```
+
 
 [Voltar ao Índice](#indice)
 
