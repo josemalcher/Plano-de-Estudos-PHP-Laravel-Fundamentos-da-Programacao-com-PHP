@@ -1089,12 +1089,174 @@ if ($a <= $b) {
 ## <a name="parte11">11 - Entrada de Dados no PHP</a>
 
 - 46 - Formulários HTML
+
+```html
+<!doctype html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>11 - Entrada de Dados no PHP</title>
+</head>
+<body>
+<div class="container">
+    <h1>Formulário</h1>
+
+    <form class="form" action="forms.php" method="POST">
+        <div class="form-group">
+            <input type="text" name="nome" placeholder="Nome:" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="password" name="senha" placeholder="Senha:" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="E-mail" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="concordo" value="SIM" class="form-control"> Concordo
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="sexo" value="F"> Femenino
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="M"> Masculino
+            </label>
+        </div>
+        <div class="form-group">
+            <select name="estado" class="form-control">
+                <option value="">Escolha o estado</option>
+                <option value="GO">Goiás</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <textarea name="descricao" placeholder="Descrição" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <!--<button type="submit" class="btn btn-success">Enviar</button>-->
+            <input type="submit" value="Enviar" class="btn btn-success">
+        </div>
+    </form>
+</div>
+</body>
+</html>
+```
+
 - 47 - Requisições GET vs POST no PHP
+
 - 48 - Pegar Dados Formulários com PHP
+
+```php
+<?php
+
+//var_dump($_GET);
+var_dump($_POST);
+// array(5) { ["nome"]=> string(0) "" ["senha"]=> string(0) "" ["email"]=> string(13) "jose@jote.com" ["estado"]=> string(0) "" ["descricao"]=> string(4) "test" }
+```
+
+
 - 49 - $_REQUEST no PHP
+
+```php
+echo "Nome: {$_REQUEST['nome']}";
+echo '<hr>';
+echo "Senha: {$_REQUEST['senha']}";
+echo '<hr>';
+echo "E-mail: {$_REQUEST['email']}";
+echo '<hr>';
+echo "Concordou? " . isset($_REQUEST['concordo']) && $_REQUEST['concordo'] != '' ? 'Sim' : 'Não';
+echo '<hr>';
+echo "Sexo: {$_REQUEST['sexo']}";
+echo '<hr>';
+echo "Estado: {$_REQUEST['estado']}";
+echo '<hr>';
+echo "Descrição: {$_REQUEST['descricao']}";
+echo '<hr>';
+```
+
 - 50 - Introdução a Validação de Formulários com PHP
+
+```php
+if ($_REQUEST['nome'] == '' && strlen($_REQUEST['nome']) <= 3) {
+    echo 'O campo nome é inválido!';
+
+    return;
+}
+```
+
 - 51 - Upload de Arquivos no PHP
 - 52 - Upload de Multiplos Arquivos no PHP
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <h1>Upload</h1>
+
+    <form class="form" method="POST" action="upload.php" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" name="photos[]" class="form-control" multiple>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
+```
+
+```php
+<?php
+
+$photos = $_FILES['photos'];
+$path = 'uploads/imgs/';
+
+if (!is_dir($path)) {
+    mkdir('uploads');
+    mkdir($path);
+}
+
+for ($i = 0; $i < count($photos['name']); $i++) {
+    $j = $i + 1;
+    if ( move_uploaded_file($photos['tmp_name'][$i], $path . $photos['name'][$i]) )
+        echo "Sucesso ao mover o arquivo {$j} <br>";
+    else
+        echo "Falha ao mover o arquivo {$j} <br>";
+}
+```
+
+```php
+<?php
+
+$photo = $_FILES['foto'];
+$path = 'uploads/imgs/';
+
+if ( move_uploaded_file($photo['tmp_name'], $path . $photo['name']) )
+    echo 'Sucesso!';
+else
+    echo 'Falha';
+```
+
 
 [Voltar ao Índice](#indice)
 
