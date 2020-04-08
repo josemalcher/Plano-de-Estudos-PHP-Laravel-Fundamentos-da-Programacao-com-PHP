@@ -765,13 +765,175 @@ echo factorial(4);
 ## <a name="parte9">9 - Manipulação de Strings</a>
 
 - 33 - Manipulação de Strings no PHP (strtoupper, strtolower, ucfirst, ucwords)
+
+  - https://secure.php.net/manual/pt_BR/indexes.functions.php
+  
+```php
+<?php
+
+$name = 'EspecializaTi - Cursos Online de TI';
+
+echo strtoupper($name);
+echo '<hr>';
+echo strtolower($name);
+echo '<hr>';
+echo ucfirst(strtolower($name));
+echo '<hr>';
+echo ucwords(strtolower($name));
+/*
+ESPECIALIZATI - CURSOS ONLINE DE TI
+especializati - cursos online de ti
+Especializati - cursos online de ti
+Especializati - Cursos Online De Ti
+*/
+
+```
+
 - 34 - Manipulação de Strings no PHP (explode, implode)
+
+```php
+<?php
+
+$state = 'São Paulo/SP';
+$arrayState = explode('/', $state);
+//var_dump($arrayState);
+// array(2) { [0]=> string(10) "São Paulo" [1]=> string(2) "SP" }
+
+
+$info = 'São Paulo/SP/Brasil/Terra';
+$arrayInfo = explode('/', $info);
+//var_dump($arrayInfo);     // array(4) { [0]=> string(10) "São Paulo" [1]=> string(2) "SP" [2]=> string(6) "Brasil" [3]=> string(5) "Terra" }
+//var_dump($arrayInfo[2]); // string(6) "Brasil"
+
+echo '<hr>';
+
+$arrayTest = [1,2,3,4,5];
+//echo implode($arrayInfo, ' # '); //São Paulo # SP # Brasil # Terra
+//echo implode($arrayTest, ' - '); // 1 - 2 - 3 - 4 - 5
+```
+
 - 35 - Manipulação de Strings no PHP (ltrim,rtrim,trim)
+
+```php
+<?php
+
+$name = ' EspecializaTi ';
+//var_dump($name);           // string(15) " EspecializaTi "
+//var_dump(ltrim($name));    // string(14) "EspecializaTi "
+//var_dump(rtrim($name));    // string(14) " EspecializaTi"
+var_dump(trim($name));       // string(13) "EspecializaTi"
+```
+
 - 36 - Manipulação de Strings no PHP (str_replace,substr,strlen)
+
+```php
+<?php
+
+$domain_1 = 'www.especializati.com';
+$domain_2 = 'https://www.especializati.com.br';
+
+//echo str_replace('www.', 'https://www.', $domain_1);   // https://www.especializati.com
+//echo substr($domain_1, 0, 4);                         //  www.
+//echo substr($domain_1, -7);                           //  ati.com
+
+$protocol = substr($domain_2, 0, 8);
+if ($protocol == 'https://')
+    echo 'É seguro!';
+else
+    echo 'Não é seguro!';
+
+// É seguro!
+
+
+//var_dump(substr($domain_2, 12, -7)); // string(13) "especializati"
+
+echo strlen($domain_2); // 32
+```
+
 - 37 - Manipulação de Strings no PHP (isset,unset)
+
+```php
+<?php
+
+$name = 'José Malcher Jr';
+
+if (isset($name))
+    echo $name;
+else
+    echo 'Não existe!';
+
+unset($name); // apaga variável da memória
+
+if (isset($name))
+    echo $name;
+else
+    echo 'Não existe!';
+```
+
 - 38 - Manipulação de Strings no PHP (date)
+
+```php
+<?php
+
+date_default_timezone_set('America/Sao_Paulo');
+echo 'O ano atual: ' . date('Y') . '<br>';
+echo 'O mês atual: ' . date('m') . '<br>';
+echo 'O dia atual: ' . date('d') . '<br>';
+echo 'A data atual: ' . date('d/m/Y') . '<br>';
+echo 'A data atual: ' . date('Y-m-d') . '<br>';
+echo 'Hora atual: ' . date('H') . '<br>';
+echo 'Minuto atual: ' . date('i') . '<br>';
+echo 'Segundo atual: ' . date('s') . '<br>';
+echo 'Hora atual: ' . date('H:i:s') . '<br>';
+echo 'Timezone: '    . date_default_timezone_get() . '<br>';
+/*
+O ano atual: 2020
+O mês atual: 04
+O dia atual: 07
+A data atual: 07/04/2020
+A data atual: 2020-04-07
+Hora atual: 23
+Minuto atual: 30
+Segundo atual: 18
+Hora atual: 23:30:18
+Timezone: America/Sao_Paulo
+*/
+
+```
+
 - 39 - Manipulação de Strings no PHP (phpinfo)
+
+```php
+<?php
+
+    phpinfo();
+```
+
 - 40 - Manipulação de Strings no PHP (md5,sha1,crypt,base64,hash)
+
+```php
+<?php
+
+$password = '123456';
+
+// echo md5($password);
+// echo sha1($password);
+// echo crypt($password, $salt);
+// $passCr = base64_encode($password);
+// echo $passCr;
+// echo base64_decode($passCr);
+// echo hash('sha512', $password);
+
+echo cryptC($password);
+
+function cryptC(String $value): String
+{
+    $hash = hash('sha512', sha1(md5(crypt($value, 'soLskisj#$sdkKd09'))));
+
+    return $hash;
+}
+```
+
 
 [Voltar ao Índice](#indice)
 
