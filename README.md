@@ -943,9 +943,143 @@ function cryptC(String $value): String
 ## <a name="parte10">10 - Operadores Matematicos no PHP</a>
 
 - 41 - Operadores Aritiméticos PHP
+
+```php
+<?php
+
+$a = 2;
+$b = 5;
+
+$result = $a + $b;
+echo "O resultado da soma entre {$a} + {$b} = {$result} <br>";
+
+$result = $b - $a;
+echo "O resultado da subtração entre {$b} - {$a} = {$result} <br>";
+
+$result = $b * $a;
+echo "O resultado da multiplicação entre {$b} * {$a} = {$result} <br>";
+
+$result = $b / $a;
+echo "O resultado da divisão entre {$b} / {$a} = {$result} <br>";
+
+$result = $b % $a;
+echo "O resultado do resto da divisão entre {$b} % {$a} = {$result} <br>";
+
+if ($b % 2 == 0)
+    echo 'Par';
+else
+    echo 'Impar';
+
+$result = (2 + (2 - 10) / 4) * 2;
+echo $result;
+```
+
 - 42 - Operadores de Atriuição PHP
+
+```php
+<?php
+
+$a = 12;
+echo "{$a} <br>";
+
+$a += 14;
+echo "{$a} <br>";
+
+$a -= 14;
+echo "{$a} <br>";
+
+$a *= 2;
+echo "{$a} <br>";
+
+$a /= 2;
+echo "{$a} <br>";
+```
+
 - 43 - Operadores Atribuição PHP (incremento, decremento)
-- 44 - Operadores Lógicos PHP free45 - Operadores Relacionais PHP
+
+```php
+<?php
+
+$a = 2;
+$b = 2;
+
+// $a++;
+// $a--;
+// ++$a;
+// --$a;
+
+// echo $a + $b++;
+// echo $a + ++$b;
+// echo $a + $b--;
+echo $a + --$b;
+```
+
+- 44 - Operadores Lógicos PHP
+
+```php
+<?php
+
+$a = 2;
+$b = 2;
+
+if (!$a != 2) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+/**
+if (($a == $b && $a == 2) || $b == 2) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+*/
+
+/**
+if ($a == $b || $a == 2) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+ */
+/**
+if ($a == $b && $a == 2) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+ */
+/**
+if ($a != $b OR $a == 3) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+ */
+/**
+if ($a == $b AND $a == 3) {
+    echo 'No IF';
+} else {
+    echo 'No ELSE';
+}
+*/
+```
+
+- 45 - Operadores Relacionais PHP
+
+```php
+<?php
+
+$a = 2;
+$b = '2';
+
+if ($a <= $b) {
+    echo 'IF';
+} else {
+    echo 'ELSE';
+}
+```
+
 
 [Voltar ao Índice](#indice)
 
