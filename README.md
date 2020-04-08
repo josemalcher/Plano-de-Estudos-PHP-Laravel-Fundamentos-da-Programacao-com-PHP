@@ -1266,7 +1266,59 @@ else
 ## <a name="parte12">12 - Sessions e Cookies no PHP</a>
 
 - 53 - Sessões (SESSIONS) no PHP
+
+- 12-Sessions-e-Cookies-no-PHP/38_set_sessoes.php
+
+```php
+<?php
+session_start();
+
+$_SESSION['auth'] = true;
+// $_SESSION['name'] = 'Carlos Ferreira';
+
+// $name = 'Carlos Ferreira';
+// echo $name;
+```
+
+- 12-Sessions-e-Cookies-no-PHP/39_get_sessoes.php
+
+```php
+<?php
+session_start();
+
+if (!isset($_SESSION['auth'])) {
+    header('Location:38_set_sessoes.php');
+}
+
+echo 'Painel de Admin';
+
+/**
+$_SESSION['name']['lastname'] = 'Outro nome';
+// include '38_set_sessoes.php';
+// echo $name;
+var_dump($_SESSION);
+ */
+```
+
 - 54 - Cookies no PHP
+
+```php
+<?php
+
+setcookie('cookie_test', 'Teste Cookie');
+setcookie('auth', 'OK', (time() + (7 * 24 * 60 * 60)));
+
+// echo $_COOKIE['cookie_test'];
+```
+
+```php
+
+<?php
+
+echo $_COOKIE['cookie_test'];
+echo $_COOKIE['auth'];
+
+```
 
 [Voltar ao Índice](#indice)
 
