@@ -1,6 +1,11 @@
 <?php
 
-function getAlbums(){
-    $albums = glob('albums/*');
-    return $albums;
+function getAlbums()
+{
+    return glob('albums/*');
+}
+
+function getMusic($album)
+{
+    return glob("albums/{$album}/musics/*.mp3");
 }

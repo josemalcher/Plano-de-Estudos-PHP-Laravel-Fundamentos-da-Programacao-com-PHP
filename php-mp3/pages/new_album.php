@@ -1,4 +1,7 @@
 <h1>Cadastrar Novo Álbum</h1>
+<br>
+<a href="?page=albums" class="btn btn-info">Voltar para os Álbuns</a>
+<hr>
 
 <form action="#" method="post">
 
@@ -13,4 +16,3 @@
 </form>
 <br>
 <hr>
-<a href="?page=albums">Voltar para os Álbuns</a>
