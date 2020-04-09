@@ -1,16 +1,23 @@
 <h1>Álbum</h1>
 <div class="row">
 <?php
-    for($i = 1 ; $i <= 10 ; $i++ ):
 
+    $albums = getAlbums();
+    //var_dump($albums);
+
+    foreach ($albums as $album):
+        $infoAlbum = explode('/', $album);
+        $nameAlbum = $infoAlbum[1];
+        //$imgAlbum = $album ."/". $nameAlbum. ".jpg"
+        $imgAlbum = "{$album}/{$nameAlbum}.jpg";
 ?>
 <div class="col-3 album">
         <a href="">
-            <img src="../imgs/cds.jpg" alt="<?=$i?>" class="img-album">
-            <h4>Álbum <?=$i?></h4>
+            <img src="<?=$imgAlbum?>" alt="<?=$nameAlbum;?>" class="img-album">
+            <h4><?=strtoupper($nameAlbum);?></h4>
         </a>
 </div>
 <?php
-    endfor;
+    endforeach;
 ?>
 </div>
