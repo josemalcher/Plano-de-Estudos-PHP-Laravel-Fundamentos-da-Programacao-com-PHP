@@ -1328,10 +1328,77 @@ echo $_COOKIE['auth'];
 ## <a name="parte13">13 - Manipulação de Arquivos e Diretórios com PHP</a>
 
 - 55 - Manipulação de diretórios no PHP (is_dir, mkdir, rmdir, getcwd, scandir, glob)
+
+```php
+<?php
+
+// var_dump(is_dir('testes'));               // bool(true)
+// var_dump(is_dir('testes'));     // bool(true)
+// var_dump(mkdir('uploads')); // Cria a pasta "uploads"
+// var_dump(mkdir('uploads/teste')); // cria a pasta dentro de uploads
+// var_dump(rmdir('uploads')); // Apaga os arquivo
+// var_dump(getcwd()); // mostra o diretório / caminho / path
+// var_dump(scandir('..')); // scannea o diretório
+// echo '<pre>';
+// var_dump(glob('../*.php')); // scanneia diretórios permite corigas
+```
+
 - 56 - Manipulação de arquivos no PHP (touch, copy, rename, unlink, file_exists)
+
+```php
+<?php
+
+//var_dump(touch('test.txt')); // Cria um arquivo
+// var_dump(rename('test.txt', 'test_2.txt')); // renomeia
+// var_dump(file_exists('test_2.txt')); // verifica se existe o arquivo
+// var_dump(copy('test.txt', 'test_copy.txt')); // copia arquivo
+// var_dump(unlink('test_2.txt')); // remove o arquivo
+```
+
 - 57 - Manipulação de arquivos no PHP (file_put_contents, file_get_contents)
+
+```php
+<?php
+
+$content = 'Algo Aqui';
+$file = 'test.txt';
+
+if (file_exists($file)) {
+    // file_put_contents($file, $content); // escreve no arquivo
+
+    var_dump(file_get_contents($file)); // ler o arquivo
+} else {
+    echo 'Arquivo não existe!';
+}
+```
+
 - 58 - Manipulação de arquivos no PHP (fopen, fclose, fwrite)
+
+```php
+<?php
+$text = 'Hoje é um lindo dia';
+generateLog($text);
+
+function generateLog($text)
+{
+    $file = fopen('projetoX.log', 'a+');
+    fwrite($file, "$text \r\n");
+    fclose($file);
+}
+```
+
 - 59 - Manipulação de arquivos no PHP (fgets, feof)
+
+```php
+<?php
+
+$file = fopen('projetoX.log', 'a+');
+while (!feof($file)) {
+    echo fgets($file, 4096) . '<br>';
+}
+fclose($file);
+```
+
 
 [Voltar ao Índice](#indice)
 
